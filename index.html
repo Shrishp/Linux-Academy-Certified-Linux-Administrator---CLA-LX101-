@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CLA Certificate Verification</title>
+</head>
+<body>
+<script>
+(function () {
+  const certId = "LDPESA6RNZG";
+  const target = "https://linuxacademy.org/verifyCertificate";
+
+  // Open verification page
+  window.location.href = target;
+
+  // Try auto-fill after page load
+  setTimeout(() => {
+    const input = document.querySelector('input[type="text"]');
+    const button = document.querySelector('button');
+    if (input && button) {
+      input.value = certId;
+      button.click();
+    }
+  }, 3000);
+})();
+</script>
+
+<p>Redirecting to certificate verification...</p>
+</body>
+</html>
